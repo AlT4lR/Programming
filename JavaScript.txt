@@ -1,0 +1,42 @@
+class Animal {
+    constructor(name, species, size, habitat, number) {
+        this.name = name;
+        this.species = species;
+        this.habitat = habitat;
+        this.number = number;
+        this.size = size;
+    }
+
+    intro() {
+        console.log("The " + this.name + " is a " + this.species + " with a size of " + this.size + " and habitat of " + this.habitat + " and a number of " + this.number);
+    }
+
+    totalMass() {
+        if (this.size == "small") {
+            console.log(10 * this.number + " kg");
+        } else if (this.size == "medium") {
+            console.log(20 * this.number + " kg");
+        } else if (this.size == "large") {
+            console.log(30 * this.number + " kg");
+        } else {
+            console.log("Unidentifiable Organism");
+        }
+    }
+}
+
+const cat = new Animal("cat", "mammal", "small", "QC", 0.2);
+const dog = new Animal("dog", "mammal", "small", "Quiapo", 2.4);
+const cow = new Animal("cow", "mammal", "large", "Farm", 12);
+const monke = new Animal("monkey", "mammal", "large", "House", 5);
+
+
+console.log("=============================== Output ====================================")
+console.log("")
+cat.intro();
+cat.totalMass();
+dog.intro();
+dog.totalMass();
+cow.intro();
+cow.totalMass();
+monke.intro();
+monke.totalMass();
